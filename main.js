@@ -17,6 +17,10 @@ loadButtonElement.addEventListener("click", function () {
   loadModel(loadInputElement.value);
 });
 
+document.querySelector("#load-input").addEventListener("keyup", (e) => {
+  e.key === "Enter" && loadButtonElement.click();
+});
+
 document.querySelectorAll(".rotate-button").forEach((btn) => {
   btn.addEventListener("click", function () {
     const input = this.closest("tr").querySelector(".rotate-input");
