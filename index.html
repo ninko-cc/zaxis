@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zaxis</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js" defer></script>
+    <script src="main.js" type="module" defer></script>
+  </head>
+  <body>
+    <h1>Zaxis</h1>
+    <div>URL: <input type="text" id="load-input" /><button id="load-button">Load</button></div>
+    <iframe id="viewer"></iframe>
+    <div id="control-panel">
+      <section>
+        <h2>Rotator</h2>
+        <table>
+          <tr>
+            <th>Axis</th>
+            <th>Degrees</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>x</td>
+            <td><input data-axis="x" class="rotate-input" type="number" /></td>
+            <td><button class="rotate-button">Rotate</button></td>
+          </tr>
+          <tr>
+            <td>y</td>
+            <td><input data-axis="y" class="rotate-input" type="number" /></td>
+            <td><button class="rotate-button">Rotate</button></td>
+          </tr>
+          <tr>
+            <td>z</td>
+            <td><input data-axis="z" class="rotate-input" type="number" /></td>
+            <td><button class="rotate-button">Rotate</button></td>
+          </tr>
+        </table>
+        <p>Coordinate: Right-handed, y-up</p>
+      </section>
+
+      <section>
+        <h2>Camera Position</h2>
+        <table>
+          <tr>
+            <th>Axis</th>
+            <th>Coordinate</th>
+          </tr>
+          <tr>
+            <td>x</td>
+            <td id="x-camera-position"></td>
+          </tr>
+          <tr>
+            <td>y</td>
+            <td id="y-camera-position"></td>
+          </tr>
+          <tr>
+            <td>z</td>
+            <td id="z-camera-position"></td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>Target Position</h2>
+        <table>
+          <tr>
+            <th>Axis</th>
+            <th>Coordinate</th>
+          </tr>
+          <tr>
+            <td>x</td>
+            <td id="x-target-position"></td>
+          </tr>
+          <tr>
+            <td>y</td>
+            <td id="y-target-position"></td>
+          </tr>
+          <tr>
+            <td>z</td>
+            <td id="z-target-position"></td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <h2>Screenshot</h2>
+        <button id="screenshot-button">Click</button>
+      </section>
+    </div>
+  </body>
+</html>
